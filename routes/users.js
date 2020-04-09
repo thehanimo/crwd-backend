@@ -13,7 +13,7 @@ router.get("/username", (req, res) => {
   ) {
     console.log(req.query);
     res.json({
-      isAvailable: false
+      isAvailable: false,
     });
     return;
   }
@@ -27,11 +27,11 @@ router.get("/username", (req, res) => {
       }
       if (results.rows.length > 0) {
         res.json({
-          isAvailable: false
+          isAvailable: false,
         });
       } else {
         res.json({
-          isAvailable: true
+          isAvailable: true,
         });
       }
     }
@@ -49,7 +49,7 @@ router.get("/email", (req, res) => {
   ) {
     console.log(req.query);
     res.json({
-      isAvailable: false
+      isAvailable: false,
     });
     return;
   }
@@ -63,24 +63,25 @@ router.get("/email", (req, res) => {
       }
       if (results.rows.length > 0) {
         res.json({
-          isAvailable: false
+          isAvailable: false,
         });
       } else {
         res.json({
-          isAvailable: true
+          isAvailable: true,
         });
       }
     }
   );
 });
 
-router.get("/", passport.authenticate("jwt", { session: false }), function(
+router.get("/", passport.authenticate("jwt", { session: false }), function (
   req,
   res
 ) {
   res.json({
+    username: req.user.username,
     email: req.user.email,
-    picture: req.user.picture
+    picture: req.user.picture,
   });
   // pool.query(
   //   "SELECT * from auth where email = $1",

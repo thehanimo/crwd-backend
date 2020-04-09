@@ -5,11 +5,11 @@ const JwtStrategy = require("passport-jwt").Strategy,
 
 const opts = {
   jwtFromRequest: ExtractJwt.fromAuthHeaderWithScheme("JWT"),
-  secretOrKey: "nodeauthsecret"
+  secretOrKey: "nodeauthsecret",
 };
 passport.use(
   "jwt",
-  new JwtStrategy(opts, function(jwt_payload, done) {
+  new JwtStrategy(opts, function (jwt_payload, done) {
     pool.query(
       "SELECT * from profile where email = $1",
       [jwt_payload.email],
@@ -17,18 +17,18 @@ passport.use(
         if (error) {
           throw error;
         }
-        if (!results.rows[0]) {
+        if (results.rows[0]) {
           pool.query(
             "SELECT * from auth where email = $1",
             [jwt_payload.email],
-            (error, results) => {
+            (error, aresults) => {
               if (error) {
                 throw error;
               }
-              return done(null, results.rows[0]);
+              return done(null, { ...results.rows[0], ...aresults.rows[0] });
             }
           );
-        } else return done(null, results.rows[0]);
+        } else return done(null, null);
       }
     );
   })

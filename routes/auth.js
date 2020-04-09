@@ -14,12 +14,12 @@ var smtpTransport = nodemailer.createTransport({
   requireTLS: true,
   auth: {
     user: "crwdtechinc@gmail.com",
-    pass: "crwdinc123"
-  }
+    pass: "crwdinc123",
+  },
 });
 
 /* GET users listing. */
-router.get("/", function(req, res, next) {
+router.get("/", function (req, res, next) {
   res.send("respond with a resource");
 });
 router.get("/verify", (req, res) => {
@@ -37,7 +37,7 @@ router.get("/verify", (req, res) => {
         JSON.parse(JSON.stringify({ email })),
         "nodeauthsecret",
         {
-          expiresIn: 365 * 24 * 60 * 60 * 1000
+          expiresIn: 365 * 24 * 60 * 60 * 1000,
         }
       );
       res.render("verified", { title: "Email Verified", email });
@@ -61,11 +61,11 @@ router.post("/login", (req, res) => {
             JSON.parse(JSON.stringify({ email: results.rows[0].email })),
             "nodeauthsecret",
             {
-              expiresIn: 365 * 24 * 60 * 60 * 1000
+              expiresIn: 365 * 24 * 60 * 60 * 1000,
             }
           );
           res.json({
-            JWT: "JWT " + token
+            JWT: "JWT " + token,
           });
         } else {
           res.status(401).end();
@@ -94,11 +94,11 @@ router.post("/register", (req, res) => {
           JSON.parse(JSON.stringify({ email })),
           "nodeauthsecret",
           {
-            expiresIn: 365 * 24 * 60 * 60 * 1000
+            expiresIn: 365 * 24 * 60 * 60 * 1000,
           }
         );
         res.json({
-          JWT: "JWT " + token
+          JWT: "JWT " + token,
         });
       } else {
         pool.query(
@@ -113,7 +113,7 @@ router.post("/register", (req, res) => {
               JSON.parse(JSON.stringify({ email })),
               "nodeauthsecret",
               {
-                expiresIn: 365 * 24 * 60 * 60 * 1000
+                expiresIn: 365 * 24 * 60 * 60 * 1000,
               }
             );
             link = "http://" + req.get("host") + "/auth/verify?id=" + token;
@@ -123,10 +123,10 @@ router.post("/register", (req, res) => {
               html:
                 "Hello,<br> Please Click on the link to verify your email.<br><a href=" +
                 link +
-                ">Click here to verify</a>"
+                ">Click here to verify</a>",
             };
             console.log(mailOptions);
-            smtpTransport.sendMail(mailOptions, function(error, response) {
+            smtpTransport.sendMail(mailOptions, function (error, response) {
               if (error) {
                 console.log(error);
                 res.end("error");
@@ -142,18 +142,18 @@ router.post("/register", (req, res) => {
   );
 });
 
-router.post("/google", function(req, res, next) {
+router.post("/google", function (req, res, next) {
   fetch(
     `https://www.googleapis.com/oauth2/v3/tokeninfo?id_token=${req.body.tokenId}`
   )
-    .then(res => res.json())
-    .then(json => {
+    .then((res) => res.json())
+    .then((json) => {
       var { email, picture } = json;
       var id = json.sub;
       console.log({
         email,
         id,
-        picture
+        picture,
       });
       pool.query(
         "SELECT * from auth where email = $1",
@@ -168,16 +168,16 @@ router.post("/google", function(req, res, next) {
               JSON.parse(JSON.stringify({ email })),
               "nodeauthsecret",
               {
-                expiresIn: 365 * 24 * 60 * 60 * 1000
+                expiresIn: 365 * 24 * 60 * 60 * 1000,
               }
             );
             res.json({
-              JWT: "JWT " + token
+              JWT: "JWT " + token,
             });
           } else {
             pool.query(
-              "INSERT INTO auth (email) VALUES ($1)",
-              [email],
+              "INSERT INTO auth (email, username) VALUES ($1, $2)",
+              [email, email],
               (error, results) => {
                 if (error) {
                   res.status(500).end();
@@ -203,11 +203,11 @@ router.post("/google", function(req, res, next) {
                           JSON.parse(JSON.stringify({ email })),
                           "nodeauthsecret",
                           {
-                            expiresIn: 365 * 24 * 60 * 60 * 1000
+                            expiresIn: 365 * 24 * 60 * 60 * 1000,
                           }
                         );
                         res.json({
-                          JWT: "JWT " + token
+                          JWT: "JWT " + token,
                         });
                       }
                     );
@@ -227,8 +227,8 @@ router.post("/linkedin", (req, res) => {
       url: `https://www.linkedin.com/oauth/v2/accessToken?client_id=81jojxryre3jo3&grant_type=authorization_code&code=${req.body.code}&redirect_uri=http://localhost:3000/linkedin&client_secret=bvH0HsKn8bZl0Ak8`,
       method: "POST",
       headers: {
-        "Content-Type": "x-www-form-urlencoded"
-      }
+        "Content-Type": "x-www-form-urlencoded",
+      },
     },
     (err, response, body) => {
       fetch(
@@ -237,14 +237,14 @@ router.post("/linkedin", (req, res) => {
           method: "GET",
           headers: {
             Authorization: `Bearer ${JSON.parse(body).access_token}`,
-            Connection: "Keep-Alive"
-          }
+            Connection: "Keep-Alive",
+          },
         }
       )
-        .then(function(res) {
+        .then(function (res) {
           return res.json();
         })
-        .then(function(json) {
+        .then(function (json) {
           var id = json.id;
           try {
             var picture =
@@ -259,14 +259,14 @@ router.post("/linkedin", (req, res) => {
               method: "GET",
               headers: {
                 Authorization: `Bearer ${JSON.parse(body).access_token}`,
-                Connection: "Keep-Alive"
-              }
+                Connection: "Keep-Alive",
+              },
             }
           )
-            .then(function(res) {
+            .then(function (res) {
               return res.json();
             })
-            .then(function(json) {
+            .then(function (json) {
               try {
                 var email = json.elements[0]["handle~"].emailAddress;
               } catch (error) {
@@ -276,7 +276,7 @@ router.post("/linkedin", (req, res) => {
               console.log({
                 email,
                 id,
-                picture
+                picture,
               });
               pool.query(
                 "SELECT * from auth where email = $1",
@@ -291,11 +291,11 @@ router.post("/linkedin", (req, res) => {
                       JSON.parse(JSON.stringify({ email })),
                       "nodeauthsecret",
                       {
-                        expiresIn: 365 * 24 * 60 * 60 * 1000
+                        expiresIn: 365 * 24 * 60 * 60 * 1000,
                       }
                     );
                     res.json({
-                      JWT: "JWT " + token
+                      JWT: "JWT " + token,
                     });
                   } else {
                     pool.query(
@@ -326,11 +326,11 @@ router.post("/linkedin", (req, res) => {
                                   JSON.parse(JSON.stringify({ email })),
                                   "nodeauthsecret",
                                   {
-                                    expiresIn: 365 * 24 * 60 * 60 * 1000
+                                    expiresIn: 365 * 24 * 60 * 60 * 1000,
                                   }
                                 );
                                 res.json({
-                                  JWT: "JWT " + token
+                                  JWT: "JWT " + token,
                                 });
                               }
                             );
@@ -347,11 +347,12 @@ router.post("/linkedin", (req, res) => {
   );
 });
 
-router.post("/test", passport.authenticate("jwt", { session: false }), function(
-  req,
-  res
-) {
-  res.status(200).end();
-});
+router.post(
+  "/test",
+  passport.authenticate("jwt", { session: false }),
+  function (req, res) {
+    res.status(200).end();
+  }
+);
 
 module.exports = router;

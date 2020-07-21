@@ -271,7 +271,7 @@ router.post("/linkedin", (req, res) => {
             .then(function (res) {
               return res.json();
             })
-            .then(function (json) {
+            .then(async function (json) {
               try {
                 var email = json.elements[0]["handle~"].emailAddress;
               } catch (error) {
@@ -286,7 +286,7 @@ router.post("/linkedin", (req, res) => {
               pool.query(
                 "SELECT * from profile where email = $1",
                 [email],
-                (error, results) => {
+                async (error, results) => {
                   if (error) {
                     res.status(500).end();
                     throw error;
@@ -303,9 +303,26 @@ router.post("/linkedin", (req, res) => {
                       JWT: "JWT " + token,
                     });
                   } else {
+                    let username = email
+                      .split("@")[0]
+                      .replace(/[^a-zA-Z]/gi, "");
+                    let count = 0;
+                    let isUsernameAvailable = false;
+                    while (!isUsernameAvailable) {
+                      let dbResp = await pool.query(
+                        "SELECT * from profile where username = $1",
+                        [count ? username + count : username]
+                      );
+                      if (dbResp.rows.length == 0) {
+                        isUsernameAvailable = true;
+                      } else {
+                        count += Math.floor(100 + Math.random() * 900);
+                      }
+                    }
+                    username = count ? username + count : username;
                     pool.query(
-                      "INSERT INTO profile (email, picture) VALUES ($1, $2)",
-                      [email, picture],
+                      "INSERT INTO profile (email, picture, username) VALUES ($1, $2, $3)",
+                      [email, picture, username],
                       (error, results) => {
                         if (error) {
                           res.status(500).end();

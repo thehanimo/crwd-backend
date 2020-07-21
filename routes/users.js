@@ -8,7 +8,7 @@ router.get("/username", (req, res) => {
     !(
       req.query.username &&
       req.query.username.length > 3 &&
-      /^[a-zA-Z]+$/.test(req.query.username)
+      /^[a-zA-Z0-9]+$/.test(req.query.username)
     )
   ) {
     console.log(req.query);

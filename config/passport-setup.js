@@ -18,16 +18,7 @@ passport.use(
           throw error;
         }
         if (results.rows[0]) {
-          pool.query(
-            "SELECT * from auth where email = $1",
-            [jwt_payload.email],
-            (error, aresults) => {
-              if (error) {
-                throw error;
-              }
-              return done(null, { ...results.rows[0], ...aresults.rows[0] });
-            }
-          );
+          return done(null, { ...results.rows[0] });
         } else return done(null, null);
       }
     );

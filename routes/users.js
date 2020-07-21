@@ -18,7 +18,7 @@ router.get("/username", (req, res) => {
     return;
   }
   pool.query(
-    "SELECT * from auth where username = $1",
+    "SELECT * from profile where username = $1",
     [req.query.username],
     (error, results) => {
       if (error) {
@@ -54,7 +54,7 @@ router.get("/email", (req, res) => {
     return;
   }
   pool.query(
-    "SELECT * from auth where email = $1",
+    "SELECT * from profile where email = $1",
     [req.query.email],
     (error, results) => {
       if (error) {
@@ -84,7 +84,7 @@ router.get("/", passport.authenticate("jwt", { session: false }), function (
     picture: req.user.picture,
   });
   // pool.query(
-  //   "SELECT * from auth where email = $1",
+  //   "SELECT * from profile where email = $1",
   //   [req.query.email],
   //   (error, results) => {
   //     if (error) {

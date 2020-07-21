@@ -26,7 +26,7 @@ router.get("/verify", (req, res) => {
   const { id } = req.query;
   const { email } = jwt.verify(id, "nodeauthsecret");
   pool.query(
-    "UPDATE auth SET isverified = $1 WHERE email = $2",
+    "UPDATE profile SET is_verified = $1 WHERE email = $2",
     [true, email],
     (error, results) => {
       if (error) {
@@ -48,7 +48,7 @@ router.get("/verify", (req, res) => {
 router.post("/login", (req, res) => {
   var { username, password } = req.body;
   pool.query(
-    "SELECT * from auth where username = $1 and isverified = $2",
+    "SELECT * from profile where username = $1 and is_verified = $2",
     [username, true],
     (error, results) => {
       if (error) {
@@ -82,7 +82,7 @@ router.post("/register", (req, res) => {
   var salt = bcrypt.genSaltSync(10);
   var hash = bcrypt.hashSync(password, salt);
   pool.query(
-    "SELECT * from auth where email = $1",
+    "SELECT * from profile where email = $1",
     [email],
     (error, results) => {
       if (error) {
@@ -102,7 +102,7 @@ router.post("/register", (req, res) => {
         });
       } else {
         pool.query(
-          "INSERT INTO auth (email, password, username, isverified) VALUES ($1, $2, $3, $4)",
+          "INSERT INTO profile (email, password, username, is_verified) VALUES ($1, $2, $3, $4)",
           [email, hash, username, false],
           (error, results) => {
             if (error) {
@@ -142,12 +142,12 @@ router.post("/register", (req, res) => {
   );
 });
 
-router.post("/google", function (req, res, next) {
+router.post("/google", async function (req, res, next) {
   fetch(
     `https://www.googleapis.com/oauth2/v3/tokeninfo?id_token=${req.body.tokenId}`
   )
     .then((res) => res.json())
-    .then((json) => {
+    .then(async (json) => {
       var { email, picture } = json;
       var id = json.sub;
       console.log({
@@ -156,9 +156,9 @@ router.post("/google", function (req, res, next) {
         picture,
       });
       pool.query(
-        "SELECT * from auth where email = $1",
+        "SELECT * from profile where email = $1",
         [email],
-        (error, results) => {
+        async (error, results) => {
           if (error) {
             res.status(500).end();
             throw error;
@@ -175,42 +175,47 @@ router.post("/google", function (req, res, next) {
               JWT: "JWT " + token,
             });
           } else {
+            let username = email.split("@")[0].replace(/[^a-zA-Z]/gi, "");
+            let count = 0;
+            let isUsernameAvailable = false;
+            while (!isUsernameAvailable) {
+              let dbResp = await pool.query(
+                "SELECT * from profile where username = $1",
+                [count ? username + count : username]
+              );
+              if (dbResp.rows.length == 0) {
+                isUsernameAvailable = true;
+              } else {
+                count += Math.floor(100 + Math.random() * 900);
+              }
+            }
+            username = count ? username + count : username;
             pool.query(
-              "INSERT INTO auth (email, username) VALUES ($1, $2)",
-              [email, email],
+              "INSERT INTO profile (email, username, picture) VALUES ($1, $2, $3)",
+              [email, username, picture],
               (error, results) => {
                 if (error) {
                   res.status(500).end();
                   throw error;
                 }
                 pool.query(
-                  "INSERT INTO oauth (provider, providerid, email) VALUES ($1, $2, $3)",
+                  "INSERT INTO oauth (provider, provider_id, email) VALUES ($1, $2, $3)",
                   ["Google", id, email],
                   (error, results) => {
                     if (error) {
                       res.status(500).end();
                       throw error;
                     }
-                    pool.query(
-                      "INSERT INTO profile (picture, email) VALUES ($1, $2)",
-                      [picture, email],
-                      (error, result) => {
-                        if (error) {
-                          res.status(500).end();
-                          throw error;
-                        }
-                        var token = jwt.sign(
-                          JSON.parse(JSON.stringify({ email })),
-                          "nodeauthsecret",
-                          {
-                            expiresIn: 365 * 24 * 60 * 60 * 1000,
-                          }
-                        );
-                        res.json({
-                          JWT: "JWT " + token,
-                        });
+                    var token = jwt.sign(
+                      JSON.parse(JSON.stringify({ email })),
+                      "nodeauthsecret",
+                      {
+                        expiresIn: 365 * 24 * 60 * 60 * 1000,
                       }
                     );
+                    res.json({
+                      JWT: "JWT " + token,
+                    });
                   }
                 );
               }
@@ -279,7 +284,7 @@ router.post("/linkedin", (req, res) => {
                 picture,
               });
               pool.query(
-                "SELECT * from auth where email = $1",
+                "SELECT * from profile where email = $1",
                 [email],
                 (error, results) => {
                   if (error) {
@@ -299,41 +304,31 @@ router.post("/linkedin", (req, res) => {
                     });
                   } else {
                     pool.query(
-                      "INSERT INTO auth (email) VALUES ($1)",
-                      [email],
+                      "INSERT INTO profile (email, picture) VALUES ($1, $2)",
+                      [email, picture],
                       (error, results) => {
                         if (error) {
                           res.status(500).end();
                           throw error;
                         }
                         pool.query(
-                          "INSERT INTO oauth (provider, providerid, email) VALUES ($1, $2, $3)",
+                          "INSERT INTO oauth (provider, provider_id, email) VALUES ($1, $2, $3)",
                           ["Linkedin", id, email],
                           (error, results) => {
                             if (error) {
                               res.status(500).end();
                               throw error;
                             }
-                            pool.query(
-                              "INSERT INTO profile (picture, email) VALUES ($1, $2)",
-                              [picture, email],
-                              (error, result) => {
-                                if (error) {
-                                  res.status(500).end();
-                                  throw error;
-                                }
-                                var token = jwt.sign(
-                                  JSON.parse(JSON.stringify({ email })),
-                                  "nodeauthsecret",
-                                  {
-                                    expiresIn: 365 * 24 * 60 * 60 * 1000,
-                                  }
-                                );
-                                res.json({
-                                  JWT: "JWT " + token,
-                                });
+                            var token = jwt.sign(
+                              JSON.parse(JSON.stringify({ email })),
+                              "nodeauthsecret",
+                              {
+                                expiresIn: 365 * 24 * 60 * 60 * 1000,
                               }
                             );
+                            res.json({
+                              JWT: "JWT " + token,
+                            });
                           }
                         );
                       }

@@ -1,0 +1,901 @@
+[
+  {
+    "title": "Gamification",
+    "unique_name": "coursera_gamification",
+    "link": "https://www.coursera.org/learn/gamification",
+    "tags": [
+      "Skills you will gain",
+      "Psychology",
+      "Marketing",
+      "Game Design",
+      "Gamification"
+    ],
+    "professor": "Kevin Werbach",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/5e/4003d6fe94ae4089d5daf13129a515/penn-logo.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Dealing With Missing Data",
+    "unique_name": "coursera_missing-data",
+    "link": "https://www.coursera.org/learn/missing-data",
+    "tags": [],
+    "professor": "Richard Valliant, Ph.D.",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/bb/a5eeb3ba2d291192b62945619da422/umd_square.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Unordered Data Structures",
+    "unique_name": "coursera_cs-fundamentals-3",
+    "link": "https://www.coursera.org/learn/cs-fundamentals-3",
+    "tags": [],
+    "professor": "Wade Fagen-Ulmschneider",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/d8/42cdc0ab2011e8b910bdf80bed9f6c/CenterILblock-ISQUAREOrangeBackgrnd.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Vital Signs: Understanding What the Body Is Telling Us",
+    "unique_name": "coursera_vital-signs",
+    "link": "https://www.coursera.org/learn/vital-signs",
+    "tags": [
+      "Skills you will gain",
+      "Dolor Assessment",
+      "Metabolic Pathways",
+      "Vital Signs",
+      "Pain Management"
+    ],
+    "professor": "Connie B. Scanga, PhD",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/5e/4003d6fe94ae4089d5daf13129a515/penn-logo.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "FinTech Disruptive Innovation: Implications for Society",
+    "unique_name": "coursera_fintech-disruption",
+    "link": "https://www.coursera.org/learn/fintech-disruption",
+    "tags": [],
+    "professor": " Theodore Henry King CLARK",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/3a/37974779f7ad2a04626183c2f8951b/ustLogo.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Modern Art & Ideas",
+    "unique_name": "coursera_modern-art-ideas",
+    "link": "https://www.coursera.org/learn/modern-art-ideas",
+    "tags": [
+      "Skills you will gain",
+      "Creativity",
+      "Art",
+      "History",
+      "Art History",
+      "Art Direction"
+    ],
+    "professor": "Lisa Mazzola",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/49/b2b6fc67e14a9692f7abba585d5a70/MoMA-Logo.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Building Batch Data Pipelines on GCP auf Deutsch",
+    "unique_name": "coursera_batch-data-pipelines-gcp-de",
+    "link": "https://www.coursera.org/learn/batch-data-pipelines-gcp-de",
+    "tags": [],
+    "professor": "Google Cloud Training",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/4e/c2f4c0f4bb11e69a33576c875f4294/cloud-twitter-avatar.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "The Evolving Universe",
+    "unique_name": "coursera_evolvinguniverse",
+    "link": "https://www.coursera.org/learn/evolvinguniverse",
+    "tags": [],
+    "professor": "S. George Djorgovski",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/d8/4ba3c0bfd211e3b9f307e0ebd93773/Caltech-ICON-ORANGE-REVERSED-RGB.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "The Changing Global Order",
+    "unique_name": "coursera_changing-global-order",
+    "link": "https://www.coursera.org/learn/changing-global-order",
+    "tags": [],
+    "professor": "Madeleine Hosli",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/99/be375da761419aa65929074c4fe213/logo-Universiteit-leiden-resized.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Design: Creation of Artifacts in Society",
+    "unique_name": "coursera_design",
+    "link": "https://www.coursera.org/learn/design",
+    "tags": [],
+    "professor": "Karl  T. Ulrich",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/5e/4003d6fe94ae4089d5daf13129a515/penn-logo.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": " Fundamentals of the Chinese character writing. Part 2",
+    "unique_name": "coursera_chinese-character-writing-2",
+    "link": "https://www.coursera.org/learn/chinese-character-writing-2",
+    "tags": [],
+    "professor": "Somkina Nadezhda",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/f7/9cff8f7e909ad6d37a2f94eb5cfd4f/CoA_Medium_color.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Researcher Management and Leadership Training",
+    "unique_name": "coursera_researcher-management-leadership-training",
+    "link": "https://www.coursera.org/learn/researcher-management-leadership-training",
+    "tags": [
+      "Skills you will gain",
+      "Mentorship",
+      "Resource Management",
+      "Clinical Research",
+      "Team Management",
+      "Leadership"
+    ],
+    "professor": "Anne M. Libby, PhD",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/f7/06e620f1a111e38144319a9c8ed320/cu-stand-alone_1_.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Fighting COVID-19 with Epidemiology: A Johns Hopkins Teach-Out",
+    "unique_name": "coursera_covid19-epidemiology",
+    "link": "https://www.coursera.org/learn/covid19-epidemiology",
+    "tags": [],
+    "professor": "Gypsyamber D'Souza, PhD, MS, MPH",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/74/7ae340ec6911e5b395490a2a565172/JHU-Logo-Square-Mini_180px.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Modern Robotics, Course 1:  Foundations of Robot Motion",
+    "unique_name": "coursera_modernrobotics-course1",
+    "link": "https://www.coursera.org/learn/modernrobotics-course1",
+    "tags": [],
+    "professor": "Kevin Lynch",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/fd/798a608d4c11e5b601399e3ec8eaf8/N-Logo.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Bioinformatic Methods I",
+    "unique_name": "coursera_bioinformatics-methods-1",
+    "link": "https://www.coursera.org/learn/bioinformatics-methods-1",
+    "tags": [
+      "Skills you will gain",
+      "Genetic Analysis",
+      "Bioinformatics Analysis",
+      "Evolution",
+      "Comparative Genomics"
+    ],
+    "professor": "Nicholas James Provart",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/04/1df8943d27a485a986a3ebf10c83d9/UofT-Crest-Square.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Social Network Analysis",
+    "unique_name": "coursera_social-network-analysis",
+    "link": "https://www.coursera.org/learn/social-network-analysis",
+    "tags": [],
+    "professor": "Martin Hilbert",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/66/4d1f6067b511e599c247e28e57110c/Logo-B-for-Coursera.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Computer Vision Basics",
+    "unique_name": "coursera_computer-vision-basics",
+    "link": "https://www.coursera.org/learn/computer-vision-basics",
+    "tags": [
+      "Skills you will gain",
+      "Computer Vision",
+      "Computer Programming",
+      "Matlab"
+    ],
+    "professor": "Radhakrishna Dasari",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/ab/af2a00e2fd11e6afdccf8b30f1d74c/UB-Logo-BlueSquare.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "\u0410\u0441\u0442\u0440\u043e\u0444\u0438\u0437\u0438\u043a\u0430: \u043e\u0442 \u0437\u0432\u0435\u0437\u0434 \u0434\u043e \u0433\u0440\u0430\u043d\u0438\u0446 \u0412\u0441\u0435\u043b\u0435\u043d\u043d\u043e\u0439",
+    "unique_name": "coursera_astrofizika",
+    "link": "https://www.coursera.org/learn/astrofizika",
+    "tags": [],
+    "professor": "\u00d0\u0092\u00d0\u00b0\u00d1\u0080\u00d1\u0088\u00d0\u00b0\u00d0\u00bb\u00d0\u00be\u00d0\u00b2\u00d0\u00b8\u00d1\u0087 \u00d0\u0094\u00d0\u00bc\u00d0\u00b8\u00d1\u0082\u00d1\u0080\u00d0\u00b8\u00d0\u00b9 \u00d0\u0090\u00d0\u00bb\u00d0\u00b5\u00d0\u00ba\u00d1\u0081\u00d0\u00b0\u00d0\u00bd\u00d0\u00b4\u00d1\u0080\u00d0\u00be\u00d0\u00b2\u00d0\u00b8\u00d1\u0087",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/02/d728c01db511e6bb400736197ca97d/logo_vert_en.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "\u526a\u8f91\uff1a\u50cf\u7f16\u5267\u4e00\u6837\u526a\u8f91",
+    "unique_name": "coursera_jian-ji",
+    "link": "https://www.coursera.org/learn/jian-ji",
+    "tags": [],
+    "professor": "\u00e8\u00ae\u00b8 \u00e8\u0082\u0096\u00e6\u00bd\u0087",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/af/1fffa076a811e38a184bd69a282c11/logo2.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "From Climate Science to Action",
+    "unique_name": "coursera_climate-science",
+    "link": "https://www.coursera.org/learn/climate-science",
+    "tags": [],
+    "professor": "Alan S. Miller ",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/ba/153ce0061611e698383f5334c5fcd6/olc_logo_b.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "\u53f2\u8a18 (Shi Ji)",
+    "unique_name": "coursera_shiji",
+    "link": "https://www.coursera.org/learn/shiji",
+    "tags": [],
+    "professor": "\u00e5\u0091\u0082\u00e4\u00b8\u0096\u00e6\u00b5\u00a9",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/1d/af896d9aaed8926efc02bdcbd37a64/Emblem72.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Successful Presentation",
+    "unique_name": "coursera_presentation-skills",
+    "link": "https://www.coursera.org/learn/presentation-skills",
+    "tags": [
+      "Skills you will gain",
+      "Communication",
+      "Business Writing",
+      "Presentation",
+      "Public Speaking"
+    ],
+    "professor": "Professor William Kuskin",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/bb/16e85962a963ab3546196705d25865/CUBoulder_360x360.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Bridging healthcare and society",
+    "unique_name": "coursera_healthcare-and-society",
+    "link": "https://www.coursera.org/learn/healthcare-and-society",
+    "tags": [],
+    "professor": "Olga Zvonareva",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/6b/43429059de11e58c5b5104eb6e83b9/TSU2-01.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Code Free Data Science",
+    "unique_name": "coursera_code-free-data-science",
+    "link": "https://www.coursera.org/learn/code-free-data-science",
+    "tags": [],
+    "professor": "Natasha Balac, Ph.D.",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/4b/a551cb6e1307836a21059a79e7ae70/UCSanDiego-Coursera-square.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "\u5de5\u7a0b\u5716\u5b78 2D CAD",
+    "unique_name": "coursera_2d-cad",
+    "link": "https://www.coursera.org/learn/2d-cad",
+    "tags": [],
+    "professor": "\u00e5\u00ba\u00b7\u00e4\u00bb\u0095\u00e4\u00bb\u00b2",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/1d/af896d9aaed8926efc02bdcbd37a64/Emblem72.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "\u00c7ok de\u011fi\u015fkenli Fonksiyon II: Uygulamalar / Multivariable Calculus II: Applications",
+    "unique_name": "coursera_calculus-diferansiyel-hesap",
+    "link": "https://www.coursera.org/learn/calculus-diferansiyel-hesap",
+    "tags": [],
+    "professor": "Attila A\u00c5\u009fkar",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/8e/e00ce7bcd4cb525bfb80bd37a3d992/Koc_Logo.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Accounting Analytics",
+    "unique_name": "coursera_accounting-analytics",
+    "link": "https://www.coursera.org/learn/accounting-analytics",
+    "tags": [
+      "Skills you will gain",
+      "Accounting",
+      "Analytics",
+      "Earnings Management",
+      "Finance"
+    ],
+    "professor": "Brian J Bushee",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/5e/4003d6fe94ae4089d5daf13129a515/penn-logo.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Getting Started With Application Development",
+    "unique_name": "coursera_getting-started-app-development",
+    "link": "https://www.coursera.org/learn/getting-started-app-development",
+    "tags": [
+      "Skills you will gain",
+      "Cloud Storage",
+      "Data Store",
+      "Google Cloud Platform",
+      "Cloud Computing"
+    ],
+    "professor": "Google Cloud Training",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/4e/c2f4c0f4bb11e69a33576c875f4294/cloud-twitter-avatar.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Municipal Solid Waste Management in Developing Countries",
+    "unique_name": "coursera_solid-waste-management",
+    "link": "https://www.coursera.org/learn/solid-waste-management",
+    "tags": [
+      "Skills you will gain",
+      "Energy",
+      "Economy",
+      "Natural Resources",
+      "Environmental Protection"
+    ],
+    "professor": "Dr. Christian Zurbr\u00c3\u00bcgg",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/5c/6a4547134c4268aa28c539f15c7ff7/EPFL-Logo-300-300.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "FinTech Foundations and Overview",
+    "unique_name": "coursera_fintech",
+    "link": "https://www.coursera.org/learn/fintech",
+    "tags": [],
+    "professor": " Theodore Henry King CLARK",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/3a/37974779f7ad2a04626183c2f8951b/ustLogo.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Business Transformation with Google Cloud en Fran\u00e7ais",
+    "unique_name": "coursera_business-transformation-google-cloud-fr",
+    "link": "https://www.coursera.org/learn/business-transformation-google-cloud-fr",
+    "tags": [],
+    "professor": "Google Cloud Training",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/4e/c2f4c0f4bb11e69a33576c875f4294/cloud-twitter-avatar.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Music and Social Action",
+    "unique_name": "coursera_music-and-social-action",
+    "link": "https://www.coursera.org/learn/music-and-social-action",
+    "tags": [],
+    "professor": "Sebastian Ruth",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/b4/339da416653830d015f5a179f864e1/square_logo_large.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Cybersecurity Compliance Framework & System Administration",
+    "unique_name": "coursera_cybersecurity-compliance-framework-system-administration",
+    "link": "https://www.coursera.org/learn/cybersecurity-compliance-framework-system-administration",
+    "tags": [],
+    "professor": "IBM Security Learning Services",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/bb/f5ced2bdd4437aa79f00eb1bf7fbf0/IBM-Logo-Blk---Square.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Sequence Models for Time Series and Natural Language Processing",
+    "unique_name": "coursera_sequence-models-tensorflow-gcp",
+    "link": "https://www.coursera.org/learn/sequence-models-tensorflow-gcp",
+    "tags": [],
+    "professor": "Google Cloud Training",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/4e/c2f4c0f4bb11e69a33576c875f4294/cloud-twitter-avatar.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Pro Tools Basics",
+    "unique_name": "coursera_protools",
+    "link": "https://www.coursera.org/learn/protools",
+    "tags": [
+      "Skills you will gain",
+      "Music",
+      "Music production",
+      "MIDI",
+      "Pro Tools",
+      "Music recording"
+    ],
+    "professor": "Chrissy Tignor-Fisher",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/86/a7cda046f711e7a0d469a7ae562564/Berklee_Logo_Stacked_RGB.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Design Patterns",
+    "unique_name": "coursera_design-patterns",
+    "link": "https://www.coursera.org/learn/design-patterns",
+    "tags": [],
+    "professor": "Kenny Wong",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/35/23d929219e4489c2d11215009dc699/coursera_180x180.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Greening the Economy: Sustainable Cities",
+    "unique_name": "coursera_gte-sustainable-cities",
+    "link": "https://www.coursera.org/learn/gte-sustainable-cities",
+    "tags": [
+      "Skills you will gain",
+      "Energy",
+      "Urban Planning",
+      "Economy",
+      "City Planning"
+    ],
+    "professor": "Dr. Kes McCormick",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/60/1150d0e0ca11e3a2dce3847b2017f0/LU_square_logo_180x180.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Positive Psychology Specialization Project: Design Your Life for Well-being",
+    "unique_name": "coursera_positive-psychology-project",
+    "link": "https://www.coursera.org/learn/positive-psychology-project",
+    "tags": [
+      "Skills you will gain",
+      "Character Strengths And Virtues",
+      "Flourishing",
+      "Positive Psychology",
+      "Personal Development"
+    ],
+    "professor": "Martin E.P. Seligman, Ph.D.",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/5e/4003d6fe94ae4089d5daf13129a515/penn-logo.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "VLSI CAD Part II: Layout",
+    "unique_name": "coursera_vlsi-cad-layout",
+    "link": "https://www.coursera.org/learn/vlsi-cad-layout",
+    "tags": [],
+    "professor": "Rob A. Rutenbar",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/d8/42cdc0ab2011e8b910bdf80bed9f6c/CenterILblock-ISQUAREOrangeBackgrnd.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Aprendizaje de m\u00e1quinas",
+    "unique_name": "coursera_aprendizaje-maquinas",
+    "link": "https://www.coursera.org/learn/aprendizaje-maquinas",
+    "tags": [],
+    "professor": "Gibran Fuentes Pineda",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/77/0f25406e2711e6b5ae85b51433cf6f/unam.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "API Security on Google Cloud's Apigee API Platform",
+    "unique_name": "coursera_api-security-apigee-gcp",
+    "link": "https://www.coursera.org/learn/api-security-apigee-gcp",
+    "tags": [],
+    "professor": "Google Cloud Training",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/4e/c2f4c0f4bb11e69a33576c875f4294/cloud-twitter-avatar.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Chinese Characters for beginner \u6c49\u5b57",
+    "unique_name": "coursera_hanzi",
+    "link": "https://www.coursera.org/learn/hanzi",
+    "tags": [],
+    "professor": "Shi Zhengyu",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/38/d88a069e4cce7bfd0acb86c4c7d6bc/.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Research Proposal: Initiating Research",
+    "unique_name": "coursera_research-proposal-initiating-research",
+    "link": "https://www.coursera.org/learn/research-proposal-initiating-research",
+    "tags": [
+      "Skills you will gain",
+      "Market Research",
+      "Research Methods",
+      "Product Research",
+      "Marketing Intelligence"
+    ],
+    "professor": "Jim Fong",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/66/4d1f6067b511e599c247e28e57110c/Logo-B-for-Coursera.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Copyright Law",
+    "unique_name": "coursera_copyright-law",
+    "link": "https://www.coursera.org/learn/copyright-law",
+    "tags": [
+      "Skills you will gain",
+      "Copyright",
+      "Copyright Protection",
+      "Fair Use"
+    ],
+    "professor": "Shyam Balganesh",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/5e/4003d6fe94ae4089d5daf13129a515/penn-logo.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Epidemiology: The Basic Science of Public Health",
+    "unique_name": "coursera_epidemiology",
+    "link": "https://www.coursera.org/learn/epidemiology",
+    "tags": [],
+    "professor": "Dr.  Karin Yeatts  ",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/ab/ad0b29abb58dcf290a091074bcca24ce/OldWell.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "\u6750\u6599\u529b\u5b78\u4e00 (Mechanics of Materials (1))",
+    "unique_name": "coursera_mechanics-of-materials-1",
+    "link": "https://www.coursera.org/learn/mechanics-of-materials-1",
+    "tags": [],
+    "professor": "\u00e9\u00bb\u0083\u00e5\u00b0\u00b9\u00e7\u0094\u00b7",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/1d/af896d9aaed8926efc02bdcbd37a64/Emblem72.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Inclusi\u00f3n social de personas con discapacidad desde un enfoque de derechos.",
+    "unique_name": "coursera_inclusion-social-personas-discapacidad",
+    "link": "https://www.coursera.org/learn/inclusion-social-personas-discapacidad",
+    "tags": [],
+    "professor": "\u00c3\u0081lvaro Besoain",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/f9/5e5d579a914e26bb6ded0b73d53f54/Screen-Shot-2019-04-26-at-11.43.40-AM.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "\u8077\u5834\u7d20\u990a (Professionalism) ",
+    "unique_name": "coursera_zhichang-suyang",
+    "link": "https://www.coursera.org/learn/zhichang-suyang",
+    "tags": [],
+    "professor": "\u00e9\u0099\u00b3\u00e5\u00ab\u00a6\u00e8\u008a\u00ac",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/1d/af896d9aaed8926efc02bdcbd37a64/Emblem72.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Fundamentals of Network Communication",
+    "unique_name": "coursera_fundamentals-network-communications",
+    "link": "https://www.coursera.org/learn/fundamentals-network-communications",
+    "tags": [],
+    "professor": "Xiaobo Zhou",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/f7/06e620f1a111e38144319a9c8ed320/cu-stand-alone_1_.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Molecular Evolution (Bioinformatics IV)",
+    "unique_name": "coursera_molecular-evolution",
+    "link": "https://www.coursera.org/learn/molecular-evolution",
+    "tags": [],
+    "professor": "Pavel  Pevzner",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/4b/a551cb6e1307836a21059a79e7ae70/UCSanDiego-Coursera-square.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Al\u00e9atoire : une introduction aux probabilit\u00e9s - Partie 2",
+    "unique_name": "coursera_probabilites-2",
+    "link": "https://www.coursera.org/learn/probabilites-2",
+    "tags": [],
+    "professor": "Sylvie M\u00c3\u00a9l\u00c3\u00a9ard",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/06/a7a3302dde11e9a6d08fb1c81d3180/Ecole-polytechnique_vertical_cmjn-carre.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Advanced Search Engine Optimization Strategies",
+    "unique_name": "coursera_seo-strategies",
+    "link": "https://www.coursera.org/learn/seo-strategies",
+    "tags": [
+      "Skills you will gain",
+      "Data Analysis",
+      "Analytics",
+      "Marketing",
+      "Mathematical Optimization"
+    ],
+    "professor": "Dave Lloyd",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/66/4d1f6067b511e599c247e28e57110c/Logo-B-for-Coursera.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "\u900f\u8fc7\u6444\u5f71\u770b\u4e16\u754c",
+    "unique_name": "coursera_sheying",
+    "link": "https://www.coursera.org/learn/sheying",
+    "tags": [],
+    "professor": "Sarah Meister",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/49/b2b6fc67e14a9692f7abba585d5a70/MoMA-Logo.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Reason and Persuasion: Thinking Through Three Dialogues By Plato",
+    "unique_name": "coursera_plato-dialogues",
+    "link": "https://www.coursera.org/learn/plato-dialogues",
+    "tags": [],
+    "professor": "John Holbo, Associate Professor",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/2c/b88aeceb118473298dee56d456cdc0/NUSlogo.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Influencer Marketing Strategy",
+    "unique_name": "coursera_influencer-marketing-strategy",
+    "link": "https://www.coursera.org/learn/influencer-marketing-strategy",
+    "tags": [],
+    "professor": "Greg Jarboe",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/b6/9fefe03aa411e4a4351b48ac74e750/RU_SIG_ST_RED_100K_360.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Matem\u00e1ticas financieras",
+    "unique_name": "coursera_matematicas",
+    "link": "https://www.coursera.org/learn/matematicas",
+    "tags": [],
+    "professor": "Dr. Gonz\u00c3\u00a1lo Antonio Luna Guerra",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/77/0f25406e2711e6b5ae85b51433cf6f/unam.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Professionalism in an era of change",
+    "unique_name": "coursera_professionalism-in-an-era-of-change",
+    "link": "https://www.coursera.org/learn/professionalism-in-an-era-of-change",
+    "tags": [
+      "Skills you will gain",
+      "Professional Development",
+      "Personal Development",
+      "Managing professionals",
+      "Leadership Development",
+      "Professional"
+    ],
+    "professor": "Nicole Mastenbroek",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/2e/55b387dec54e28a3f8ff522d125978/3_cm_hs_avatar_corporate_square.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "R\u00e9daction de contrats",
+    "unique_name": "coursera_contrats",
+    "link": "https://www.coursera.org/learn/contrats",
+    "tags": [],
+    "professor": "Sylvain Marchand",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/3d/924a31c87cba44f62637ede5a9ba69/UNIGE-SquareLogo-600x600.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Six Sigma Tools for Improve and Control",
+    "unique_name": "coursera_six-sigma-improve-control",
+    "link": "https://www.coursera.org/learn/six-sigma-improve-control",
+    "tags": [],
+    "professor": "Christina Scherrer, PhD",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/74/2e3bed61bdd472ff2de4270331f6c0/georgia.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "What\u2019s Your Big Idea?",
+    "unique_name": "coursera_big-ideas",
+    "link": "https://www.coursera.org/learn/big-ideas",
+    "tags": [],
+    "professor": "Professor Buck  Goldstein",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/ab/ad0b29abb58dcf290a091074bcca24ce/OldWell.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Afrique et mondialisation, regards crois\u00e9s",
+    "unique_name": "coursera_afrique-mondialisation",
+    "link": "https://www.coursera.org/learn/afrique-mondialisation",
+    "tags": [],
+    "professor": "Bertrand Badie",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/16/60429009c611e5933c2d82813d6d0a/SCIENCES-PO_blason_RGB_360x360.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Chemerinsky on Constitutional Law - The Structure of Government",
+    "unique_name": "coursera_chemerinsky-on-constitutional-law-structure-of-government",
+    "link": "https://www.coursera.org/learn/chemerinsky-on-constitutional-law-structure-of-government",
+    "tags": [],
+    "professor": "Erwin Chemerinsky",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/39/31c7a00bb411e4b2adb7c560fb2da9/UCI_MB_PI_WM_300x300_YellowonBlue.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Vozes da Mudan\u00e7a Social",
+    "unique_name": "coursera_vozes-da-mudanca-social",
+    "link": "https://www.coursera.org/learn/vozes-da-mudanca-social",
+    "tags": [],
+    "professor": "Nick Martin",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/4b/97050d35364693bba0cc9442076a8f/MOOC-Logos-EN--04.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Introdu\u00e7\u00e3o ao Controle de Sistemas",
+    "unique_name": "coursera_controle",
+    "link": "https://www.coursera.org/learn/controle",
+    "tags": [],
+    "professor": "Jackson Paul Matsuura",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/d8/b56970e03e11e5b08f85a2edf0fe5f/logo_ita--Squared--360x360.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Branding and Customer Experience",
+    "unique_name": "coursera_branding-and-cx",
+    "link": "https://www.coursera.org/learn/branding-and-cx",
+    "tags": [
+      "Skills you will gain",
+      "Employment",
+      "Leadership",
+      "Management",
+      "Customer Experience"
+    ],
+    "professor": "Michael Thompson",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/c1/7b3f70ad6911e68aeeff5dd478f537/01_ie_Claim_V_300_square.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Proyecto de Fundamentos Empresariales de Wharton",
+    "unique_name": "coursera_wharton-proyecto-final-empresariales",
+    "link": "https://www.coursera.org/learn/wharton-proyecto-final-empresariales",
+    "tags": [],
+    "professor": "Christian Terwiesch",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/5e/4003d6fe94ae4089d5daf13129a515/penn-logo.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Continuous Delivery & DevOps ",
+    "unique_name": "coursera_uva-darden-continous-delivery-devops",
+    "link": "https://www.coursera.org/learn/uva-darden-continous-delivery-devops",
+    "tags": [
+      "Skills you will gain",
+      "Devops",
+      "Continuous Delivery",
+      "Unit Testing",
+      "Infrastructure As Code",
+      "System Testing"
+    ],
+    "professor": "Alex Cowan",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/f2/9b83af4f4a200e807feeb2969f02c9/uva_logo.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Our Energy Future",
+    "unique_name": "coursera_future-of-energy",
+    "link": "https://www.coursera.org/learn/future-of-energy",
+    "tags": [
+      "Skills you will gain",
+      "Energy",
+      "Sustainable Energy",
+      "Energy Systems",
+      "Environmental Protection"
+    ],
+    "professor": "Dr. Stephen Mayfield",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/4b/a551cb6e1307836a21059a79e7ae70/UCSanDiego-Coursera-square.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "GIS Data Formats, Design and Quality",
+    "unique_name": "coursera_gis-data",
+    "link": "https://www.coursera.org/learn/gis-data",
+    "tags": [
+      "Skills you will gain",
+      "Spatial Analysis",
+      "Analytics",
+      "Workflow",
+      "Data Management"
+    ],
+    "professor": "Nick Santos",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/66/4d1f6067b511e599c247e28e57110c/Logo-B-for-Coursera.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Fundamentals of Management",
+    "unique_name": "coursera_fundamentals-of-management",
+    "link": "https://www.coursera.org/learn/fundamentals-of-management",
+    "tags": [
+      "Skills you will gain",
+      "Management Theory",
+      "Management Styles",
+      "Leadership",
+      "Management"
+    ],
+    "professor": "  Dave Nagy",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/39/31c7a00bb411e4b2adb7c560fb2da9/UCI_MB_PI_WM_300x300_YellowonBlue.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "\u521b\u65b0\u601d\u7ef4",
+    "unique_name": "coursera_chuangxin-siwei",
+    "link": "https://www.coursera.org/learn/chuangxin-siwei",
+    "tags": [],
+    "professor": "\u00e7\u00bd\u0097\u00e6\u0098\u00ad\u00e9\u0094\u008b",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/0f/60e6d0a83511e590e237bb258de286/ustcblue.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Fundamentals of Visualization with Tableau",
+    "unique_name": "coursera_data-visualization-tableau",
+    "link": "https://www.coursera.org/learn/data-visualization-tableau",
+    "tags": [
+      "Skills you will gain",
+      "Tableau Software",
+      "Data Virtualization",
+      "Data Visualization (DataViz)",
+      "Visualization (Computer Graphics)"
+    ],
+    "professor": "Desiree' Abbott",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/66/4d1f6067b511e599c247e28e57110c/Logo-B-for-Coursera.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Data Analysis Tools",
+    "unique_name": "coursera_data-analysis-tools",
+    "link": "https://www.coursera.org/learn/data-analysis-tools",
+    "tags": [
+      "Skills you will gain",
+      "Chi-Squared (Chi-2) Distribution",
+      "Data Analysis",
+      "Statistical Hypothesis Testing",
+      "Analysis Of Variance (ANOVA)"
+    ],
+    "professor": "Jen Rose",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/13/7948a0d50011e58bd959a86470a32c/ACM15324_Coursera_SquareLogo_0112_SF.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Financial Accounting Fundamentals",
+    "unique_name": "coursera_uva-darden-financial-accounting",
+    "link": "https://www.coursera.org/learn/uva-darden-financial-accounting",
+    "tags": [
+      "Skills you will gain",
+      "Financial Accounting",
+      "Accounting",
+      "Financial Statement",
+      "Balance Sheet"
+    ],
+    "professor": "Luann J. Lynch",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/f2/9b83af4f4a200e807feeb2969f02c9/uva_logo.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Subsistence Marketplaces",
+    "unique_name": "coursera_subsistence-marketplaces",
+    "link": "https://www.coursera.org/learn/subsistence-marketplaces",
+    "tags": [],
+    "professor": "Madhu Viswanathan",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/d8/42cdc0ab2011e8b910bdf80bed9f6c/CenterILblock-ISQUAREOrangeBackgrnd.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Introduction to Programming with MATLAB",
+    "unique_name": "coursera_matlab",
+    "link": "https://www.coursera.org/learn/matlab",
+    "tags": [
+      "Skills you will gain",
+      "Computer Programming",
+      "Problem Solving",
+      "Matlab",
+      "Programming Language"
+    ],
+    "professor": "Akos Ledeczi",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/8f/64ec0b2f7b95b23b7e5f0537131e9c/Vanderbilt-Coursera-360x360.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Google Cloud Platform Fundamentals: Core Infrastructure en Fran\u00e7ais",
+    "unique_name": "coursera_gcp-fundamentals-fr",
+    "link": "https://www.coursera.org/learn/gcp-fundamentals-fr",
+    "tags": [],
+    "professor": "Google Cloud Training",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/4e/c2f4c0f4bb11e69a33576c875f4294/cloud-twitter-avatar.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Fundamentals of Negotiation, with Goldman Sachs 10,000 Women",
+    "unique_name": "coursera_10k-women-10",
+    "link": "https://www.coursera.org/learn/10k-women-10",
+    "tags": [
+      "Skills you will gain",
+      "Emotional Intelligence",
+      "Customer Relationship Management (CRM)",
+      "Communication",
+      "Bargaining",
+      "Negotiation"
+    ],
+    "professor": "Goldman Sachs 10,000 Women",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/a7/d20c6054fd11e8b71765c89b1d2a6d/800x800.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Python Programming Essentials",
+    "unique_name": "coursera_python-programming",
+    "link": "https://www.coursera.org/learn/python-programming",
+    "tags": [
+      "Skills you will gain",
+      "Codeskulptor",
+      "Python Syntax And Semantics",
+      "Python Programming",
+      "Debugging"
+    ],
+    "professor": "Scott Rixner",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/0a/f036c28cee4d77a78b078d73cb3f0a/University_Lockups_Digital_Rice_Blue_300x300.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Introduction to Deep Learning & Neural Networks with Keras",
+    "unique_name": "coursera_introduction-to-deep-learning-with-keras",
+    "link": "https://www.coursera.org/learn/introduction-to-deep-learning-with-keras",
+    "tags": [
+      "Skills you will gain",
+      "Deep Learning",
+      "Artificial Neural Network",
+      "Artificial Intelligence (AI)",
+      "Machine Learning",
+      "keras"
+    ],
+    "professor": "Alex Aklson",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/bb/f5ced2bdd4437aa79f00eb1bf7fbf0/IBM-Logo-Blk---Square.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "C\u00f3mputo evolutivo",
+    "unique_name": "coursera_computo-evolutivo",
+    "link": "https://www.coursera.org/learn/computo-evolutivo",
+    "tags": [],
+    "professor": "Katya Rodr\u00c3\u00adguez V\u00c3\u00a1zquez",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/77/0f25406e2711e6b5ae85b51433cf6f/unam.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Website Optimization Client Report Project",
+    "unique_name": "coursera_seo-project",
+    "link": "https://www.coursera.org/learn/seo-project",
+    "tags": [],
+    "professor": "Rebekah May",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/66/4d1f6067b511e599c247e28e57110c/Logo-B-for-Coursera.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "\u00ab\u041b\u043e\u0432\u0446\u044b \u0447\u0435\u043b\u043e\u0432\u0435\u043a\u043e\u0432\u00bb \u0438\u043b\u0438 \u0441\u043e\u0446\u0438\u0430\u043b\u044c\u043d\u044b\u0435 \u0441\u0435\u0442\u0438 \u0432 \u043c\u0435\u0434\u0438\u0430, \u0431\u0438\u0437\u043d\u0435\u0441\u0435, \u0440\u0435\u043a\u0440\u0443\u0442\u0438\u043d\u0433\u0435 \u0438 \u043e\u0431\u0440\u0430\u0437\u043e\u0432\u0430\u043d\u0438\u0438",
+    "unique_name": "coursera_sotsialnaya-set",
+    "link": "https://www.coursera.org/learn/sotsialnaya-set",
+    "tags": [],
+    "professor": "\u00d0\u0090\u00d0\u00bd\u00d0\u00b4\u00d1\u0080\u00d0\u00b5\u00d0\u00b9 \u00d0\u009f\u00d0\u00b5\u00d1\u0082\u00d1\u0080\u00d0\u00be\u00d0\u00b2\u00d0\u00b8\u00d1\u0087 \u00d0\u0093\u00d0\u00bb\u00d1\u0083\u00d1\u0085\u00d0\u00be\u00d0\u00b2 (Andrey P. Glukhov)",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/6b/43429059de11e58c5b5104eb6e83b9/TSU2-01.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": " Mandarin Chinese for Intermediate Learners: Part 1",
+    "unique_name": "coursera_mandarin-chinese-intermediate-learners-1",
+    "link": "https://www.coursera.org/learn/mandarin-chinese-intermediate-learners-1",
+    "tags": [
+      "Skills you will gain",
+      "Mandarin Chinese",
+      "foreign language",
+      "HSK3"
+    ],
+    "professor": "An Na",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/18/8ae455893dd9386c855414acf90ed8/________.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Integrating Scripts for Scene Interactions",
+    "unique_name": "coursera_integrating-scripts-for-scene-interactions",
+    "link": "https://www.coursera.org/learn/integrating-scripts-for-scene-interactions",
+    "tags": [
+      "Skills you will gain",
+      "Creative Coding",
+      "3d artist",
+      "Graphics Pipeline",
+      "Affinity Designer"
+    ],
+    "professor": "Joy Horvath",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/be/8603e0fae811e7a28847c296175055/unity-coursera-square_logo-180x180-_2x.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Designing for Sustainment: Keeping Improvement Work on Track (Patient Safety IV)",
+    "unique_name": "coursera_patient-safety-sustainment",
+    "link": "https://www.coursera.org/learn/patient-safety-sustainment",
+    "tags": [
+      "Skills you will gain",
+      "Change Management",
+      "Project Planning",
+      "Staff Engagement"
+    ],
+    "professor": "Lisa H. Lubomski, PhD",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/74/7ae340ec6911e5b395490a2a565172/JHU-Logo-Square-Mini_180px.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "Google Cloud Product Fundamentals",
+    "unique_name": "coursera_google-cloud-product-fundamentals",
+    "link": "https://www.coursera.org/learn/google-cloud-product-fundamentals",
+    "tags": [],
+    "professor": "Google Cloud Training",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/http://coursera-university-assets.s3.amazonaws.com/4e/c2f4c0f4bb11e69a33576c875f4294/cloud-twitter-avatar.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  },
+  {
+    "title": "\u793e\u4f1a\u8c03\u67e5\u4e0e\u7814\u7a76\u65b9\u6cd5 \uff08\u4e0a\uff09Methodologies in Social Research (Part I)",
+    "unique_name": "coursera_shehu-yanjiu-fangfa",
+    "link": "https://www.coursera.org/learn/shehu-yanjiu-fangfa",
+    "tags": [],
+    "professor": "\u00e9\u0082\u00b1\u00e6\u00b3\u00bd\u00e5\u00a5\u0087 \u00ef\u00bc\u0088Qiu Zeqi\u00ef\u00bc\u0089",
+    "picture": "https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera-university-assets.s3.amazonaws.com/38/d88a069e4cce7bfd0acb86c4c7d6bc/.png?auto=format%2Ccompress&dpr=1&w=120&h=120"
+  }
+]

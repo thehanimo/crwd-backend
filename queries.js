@@ -19,6 +19,17 @@ CREATE TABLE if not exists book (
   bookinfo jsonb
   );
 
+  CREATE TABLE if not exists course (
+    id serial not null primary key,
+    title varchar(10000),
+    link varchar(10000),
+    professor varchar(10000),
+    picture varchar(10000),
+    rating decimal default 0,
+    rating_count int default 0,
+    courseinfo jsonb
+    );
+
 CREATE TABLE if not exists profile (
   id serial not null primary key,
   username varchar(10000),

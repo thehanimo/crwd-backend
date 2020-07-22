@@ -3,23 +3,21 @@ var router = express.Router();
 var pool = require("../queries");
 const passport = require("passport");
 
-// INSERT BOOKS FROM test-books.json
+// INSERT COURSES FROM test-courses.json
 
-// var inputData = require("../test-books.json");
+// var inputData = require("../test-courses.json");
 // for (let i = 0; i < inputData.length; i++) {
 //   var temp = inputData[i];
-//   if (!temp.publishedDate) continue;
 //   pool
 //     .query(
-//       "INSERT INTO book(title, link, author, picture, pub_date, bookinfo) VALUES($1, $2, $3, $4, $5, $6)",
+//       "INSERT INTO course(title, link, professor, picture, courseinfo) VALUES($1, $2, $3, $4, $5)",
 //       [
 //         temp.title,
 //         `https://www.amazon.com/dp/${temp.isbn}`,
-//         temp.authors.join(),
-//         temp.thumbnailUrl,
-//         new Date(temp.publishedDate.$date),
+//         temp.professor,
+//         temp.picture.split("&w")[0] + "&w=500&h=500",
 //         {
-//           tags: temp.categories,
+//           tags: temp.tags,
 //           reviews: [],
 //           comments: [],
 //         },
@@ -32,9 +30,9 @@ const passport = require("passport");
 router.get("/", (req, res) => {
   if (req.query.id) {
     pool
-      .query(`SELECT * FROM book WHERE id = $1`, [req.query.id])
+      .query(`SELECT * FROM course WHERE id = $1`, [req.query.id])
       .then((dbRes) => {
-        dbRes.rows[0].bookinfo.reviews = dbRes.rows[0].bookinfo.reviews.reverse();
+        dbRes.rows[0].courseinfo.reviews = dbRes.rows[0].courseinfo.reviews.reverse();
         res.json(dbRes.rows[0]);
       })
       .catch((e) => res.status(500).end());
@@ -46,7 +44,7 @@ router.get("/", (req, res) => {
   pool
     .query(
       `SELECT *, CEILING((count(*) OVER()) / 9.0) AS totalPages
-    FROM book
+    FROM course
     ORDER BY rating desc
     LIMIT $1 OFFSET $2;`,
       [itemsPerPage, (page - 1) * itemsPerPage]
@@ -62,11 +60,12 @@ router.post(
   passport.authenticate("jwt", { session: false }),
   function (req, res) {
     pool
-      .query(`SELECT bookinfo, rating, rating_count from book where id = $1`, [
-        req.params.id,
-      ])
+      .query(
+        `SELECT courseinfo, rating, rating_count from course where id = $1`,
+        [req.params.id]
+      )
       .then((dbResp) => {
-        let { reviews } = dbResp.rows[0].bookinfo;
+        let { reviews } = dbResp.rows[0].courseinfo;
         let { username } = req.user;
         let { rating, rating_count } = dbResp.rows[0];
         rating = parseFloat(rating);
@@ -83,13 +82,13 @@ router.post(
           }
         }
         if (doesExist) {
-          dbResp.rows[0].bookinfo.reviews = reviews;
+          dbResp.rows[0].courseinfo.reviews = reviews;
           pool
             .query(
-              `UPDATE book
-        SET rating = $3, bookinfo = $2
+              `UPDATE course
+        SET rating = $3, courseinfo = $2
         WHERE id = $1;`,
-              [req.params.id, JSON.stringify(dbResp.rows[0].bookinfo), rating]
+              [req.params.id, JSON.stringify(dbResp.rows[0].courseinfo), rating]
             )
             .then(() => res.json({ rating }))
             .catch((e) => {
@@ -99,11 +98,11 @@ router.post(
         } else {
           pool
             .query(
-              `UPDATE book
-        SET rating = $3, rating_count = $4, bookinfo = jsonb_set(
-          bookinfo::jsonb,
+              `UPDATE course
+        SET rating = $3, rating_count = $4, courseinfo = jsonb_set(
+          courseinfo::jsonb,
           array['reviews'],
-          (bookinfo->'reviews')::jsonb || $2::jsonb)
+          (courseinfo->'reviews')::jsonb || $2::jsonb)
         WHERE id = $1;`,
               [
                 req.params.id,
@@ -136,9 +135,9 @@ router.post(
 
 router.get("/:id/reviews", function (req, res) {
   pool
-    .query(`SELECT bookinfo from book where id = $1`, [req.params.id])
+    .query(`SELECT courseinfo from course where id = $1`, [req.params.id])
     .then((dbResp) => {
-      res.json(dbResp.rows[0].bookinfo.reviews.reverse());
+      res.json(dbResp.rows[0].courseinfo.reviews.reverse());
     })
     .catch((e) => {
       res.status(500).end();

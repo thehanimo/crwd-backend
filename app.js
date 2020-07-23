@@ -11,7 +11,8 @@ var authRouter = require("./routes/auth");
 var bookRouter = require("./routes/books");
 var courseRouter = require("./routes/courses");
 var playlistRouter = require("./routes/playlists");
-let discussionRouter = require("./routes/discussions")
+let discussionRouter = require("./routes/discussions");
+let favouritesRouter = require("./routes/favourites");
 const passportSetup = require("./config/passport-setup");
 
 var app = express();
@@ -41,6 +42,7 @@ app.use("/books", bookRouter);
 app.use("/courses", courseRouter);
 app.use("/playlists", playlistRouter);
 app.use("/discussions", discussionRouter);
+app.use("/favourites", favouritesRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

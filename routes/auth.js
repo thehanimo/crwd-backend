@@ -102,8 +102,18 @@ router.post("/register", (req, res) => {
         });
       } else {
         pool.query(
-          "INSERT INTO profile (email, password, username, is_verified) VALUES ($1, $2, $3, $4)",
-          [email, hash, username, false],
+          "INSERT INTO profile (email, password, username, is_verified, profileinfo) VALUES ($1, $2, $3, $4, $5)",
+          [
+            email,
+            hash,
+            username,
+            false,
+            JSON.stringify({
+              favouriteBooks: [],
+              favouriteCourses: [],
+              favouritePlaylists: [],
+            }),
+          ],
           (error, results) => {
             if (error) {
               res.status(500).end();
@@ -191,8 +201,17 @@ router.post("/google", async function (req, res, next) {
             }
             username = count ? username + count : username;
             pool.query(
-              "INSERT INTO profile (email, username, picture) VALUES ($1, $2, $3)",
-              [email, username, picture],
+              "INSERT INTO profile (email, username, picture, profileinfo) VALUES ($1, $2, $3, $4)",
+              [
+                email,
+                username,
+                picture,
+                JSON.stringify({
+                  favouriteBooks: [],
+                  favouriteCourses: [],
+                  favouritePlaylists: [],
+                }),
+              ],
               (error, results) => {
                 if (error) {
                   res.status(500).end();
@@ -321,8 +340,17 @@ router.post("/linkedin", (req, res) => {
                     }
                     username = count ? username + count : username;
                     pool.query(
-                      "INSERT INTO profile (email, picture, username) VALUES ($1, $2, $3)",
-                      [email, picture, username],
+                      "INSERT INTO profile (email, picture, username, profileinfo) VALUES ($1, $2, $3, $4)",
+                      [
+                        email,
+                        picture,
+                        username,
+                        JSON.stringify({
+                          favouriteBooks: [],
+                          favouriteCourses: [],
+                          favouritePlaylists: [],
+                        }),
+                      ],
                       (error, results) => {
                         if (error) {
                           res.status(500).end();

@@ -74,34 +74,52 @@ router.get("/email", (req, res) => {
   );
 });
 
-router.get("/", passport.authenticate("jwt", { session: false }), function (
-  req,
-  res
-) {
-  res.json({
-    username: req.user.username,
-    email: req.user.email,
-    picture: req.user.picture,
-  });
-  // pool.query(
-  //   "SELECT * from profile where email = $1",
-  //   [req.query.email],
-  //   (error, results) => {
-  //     if (error) {
-  //       res.status(500).end();
-  //       throw error;
-  //     }
-  //     if (results.rows.length > 0) {
-  //       res.json({
-  //         isAvailable: false
-  //       });
-  //     } else {
-  //       res.json({
-  //         isAvailable: true
-  //       });
-  //     }
-  //   }
-  // );
-});
+async function convertFavourites(table, arr) {
+  if (arr.length == 0) return [];
+  let params = [];
+  for (let i = 1; i <= arr.length; i++) {
+    params.push("$" + i);
+  }
+
+  let results = await pool.query(
+    `SELECT * from ${table} where id IN (${params.join(",")})`,
+    arr
+  );
+  return results.rows;
+}
+
+router.get(
+  "/",
+  passport.authenticate("jwt", { session: false }),
+  async function (req, res) {
+    res.json(req.user);
+  }
+);
+
+router.get(
+  "/home",
+  passport.authenticate("jwt", { session: false }),
+  async function (req, res) {
+    let out = req.user;
+    let {
+      favouriteBooks,
+      favouriteCourses,
+      favouritePlaylists,
+    } = req.user.profileinfo;
+    out.profileinfo.favouriteBooks = await convertFavourites(
+      "book",
+      favouriteBooks
+    );
+    out.profileinfo.favouriteCourses = await convertFavourites(
+      "course",
+      favouriteCourses
+    );
+    out.profileinfo.favouritePlaylists = await convertFavourites(
+      "playlist",
+      favouritePlaylists
+    );
+    res.json(out);
+  }
+);
 
 module.exports = router;

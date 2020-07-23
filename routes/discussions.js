@@ -3,12 +3,10 @@ var router = express.Router();
 var pool = require("../queries");
 const passport = require("passport");
 
-
-
 function createDiscussionPostRoute(tablename, infoname) {
   return function (req, res) {
     console.log(req.params.id, req.user.username, req.body.comment);
-      console.log(req.body);
+    console.log(req.body);
     pool
       .query(
         `UPDATE ${tablename} SET
@@ -17,44 +15,51 @@ function createDiscussionPostRoute(tablename, infoname) {
       array['comments'],
       (${infoname}->'comments')::jsonb || $2::jsonb)
     WHERE id = $1;`,
-          [
-            req.params.id,
-            `${[
-              JSON.stringify({
-                username: req.user.username,
-                comment: req.body.comment,
-                date_written: new Date(Date.now()),
-              }),
-            ]}`,
-          ]
-        )
-        .then(() => {
-          res.json({
-            username: req.user.username,
-            comment: req.body.comment,
-            date_written: new Date(Date.now()),
-          });
-        })
-        .catch((e) => {
-          console.log("error", e);
-          res.status(500).end();
+        [
+          req.params.id,
+          `${[
+            JSON.stringify({
+              username: req.user.username,
+              user_picture: req.user.picture,
+              comment: req.body.comment,
+              date_written: new Date(Date.now()),
+            }),
+          ]}`,
+        ]
+      )
+      .then(() => {
+        res.json({
+          username: req.user.username,
+          user_picture: req.user.picture,
+          comment: req.body.comment,
+          date_written: new Date(Date.now()),
         });
-   }
+      })
+      .catch((e) => {
+        console.log("error", e);
+        res.status(500).end();
+      });
+  };
 }
 
 function createDiscussionGetRoute(tablename, infoname) {
-  return function(req, res) {
+  return function (req, res) {
     pool
-    .query(`SELECT title, ${infoname} FROM ${tablename} WHERE id = $1`, [req.params.id])
-    .then((dbRes) => {
-      console.log(dbRes);
-      res.json({
-        posts: dbRes.rows[0][infoname].comments,
-        topic: dbRes.rows[0].title
+      .query(`SELECT title, ${infoname} FROM ${tablename} WHERE id = $1`, [
+        req.params.id,
+      ])
+      .then((dbRes) => {
+        console.log(dbRes);
+        res.json({
+          posts: dbRes.rows[0][infoname].comments,
+          topic: dbRes.rows[0].title,
+        });
+      })
+      .catch((e) => {
+        console.log(e);
+        return res.status(500).end();
       });
-    })
-    .catch((e) => {console.log(e); return res.status(500).end()});  
-  }
+  };
 }
 
 router.post(
@@ -69,7 +74,10 @@ router.post(
   passport.authenticate("jwt", { session: false }),
   createDiscussionPostRoute("playlist", "playlistinfo")
 );
-router.get("/playlist/:id", createDiscussionGetRoute("playlist", "playlistinfo"));
+router.get(
+  "/playlist/:id",
+  createDiscussionGetRoute("playlist", "playlistinfo")
+);
 
 router.post(
   "/book/:id",
@@ -77,7 +85,5 @@ router.post(
   createDiscussionPostRoute("book", "bookinfo")
 );
 router.get("/book/:id", createDiscussionGetRoute("book", "bookinfo"));
-
-
 
 module.exports = router;

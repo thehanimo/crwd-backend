@@ -57,11 +57,12 @@ router.get("/", (req, res) => {
     .query(
       `SELECT *, CEILING((count(*) OVER()) / 9.0) AS totalPages
     FROM course
-    ORDER BY rating desc
+    ORDER BY rating desc, id
     LIMIT $1 OFFSET $2;`,
       [itemsPerPage, (page - 1) * itemsPerPage]
     )
     .then((dbRes) => {
+      console.log(dbRes.rows);
       res.json(dbRes.rows);
     })
     .catch((e) => res.status(500).end());

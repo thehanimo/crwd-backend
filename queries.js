@@ -14,6 +14,7 @@ CREATE TABLE if not exists book (
   author varchar(10000),
   picture varchar(10000),
   pub_date date,
+  description text,
   rating decimal default 0,
   rating_count int default 0,
   bookinfo jsonb
@@ -24,8 +25,10 @@ CREATE TABLE if not exists book (
     title varchar(10000),
     link varchar(10000),
     professor varchar(10000),
+    description text,
     picture varchar(10000),
     rating decimal default 0,
+    uniquename varchar(1000),
     rating_count int default 0,
     courseinfo jsonb
     );

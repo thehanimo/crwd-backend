@@ -1,7 +1,7 @@
 const getBookReviews = () => {
   let reviews = [];
   let rating = 0,
-    rating_count = 5;
+    rating_count = 3;
   for (let i = 0; i < rating_count; i++) {
     let rand = Math.round(Math.random() * 4);
     reviews.push({
@@ -20,7 +20,7 @@ const getBookReviews = () => {
 const getCourseReviews = () => {
   let reviews = [];
   let rating = 0,
-    rating_count = 5;
+    rating_count = 3;
   for (let i = 0; i < rating_count; i++) {
     let rand = Math.round(Math.random() * 4);
     reviews.push({
@@ -58,7 +58,31 @@ const getRandomDiscussions = () => {
   return comments.sort((a, b) => (a.date_written < b.date_written ? -1 : 1));
 };
 
-module.exports = { getBookReviews, getCourseReviews, getRandomDiscussions };
+const getPlaylists = () => {
+  let data = [];
+  for (let i = 0; i < playlists.length; i++) {
+    let { reviews, rating, rating_count } = getCourseReviews();
+    let comments = getRandomDiscussions();
+    data.push({
+      ...playlists[i],
+      rating,
+      rating_count,
+      playlistinfo: {
+        ...playlists[i].playlistinfo,
+        comments,
+        reviews,
+      },
+    });
+  }
+  return data;
+};
+
+module.exports = {
+  getBookReviews,
+  getCourseReviews,
+  getRandomDiscussions,
+  getPlaylists,
+};
 
 const randomDiscussions = [
   [
@@ -115,20 +139,20 @@ const courseReviews = [
   {
     review:
       "Wow! An amazing course. Would recommend this to anyone, any day! 💯",
-    rating: 4.5,
+    rating: 5,
   },
   {
     review:
       "This course is amazing. Although unappealing to beginners, it is quite impressive! 👍",
-    rating: 3.5,
+    rating: 4.5,
   },
   {
     review: "A good course. Didn't find anything quite new in it though.",
-    rating: 3,
+    rating: 4,
   },
   {
     review: "A mediocre course. There are better courses out there.",
-    rating: 1.5,
+    rating: 3.5,
   },
   {
     review: "Poor. Full of typos and errors. Didn't expect this at all. 👎",
@@ -435,5 +459,169 @@ const names = [
   },
   {
     username: "Fanechka Linkin".toLowerCase().split(" ")[0],
+  },
+];
+
+const playlists = [
+  {
+    title: "Node.js made Easy",
+    description: "Follow these steps to master Node.js",
+    username: names[Math.round(Math.random() * 99)].username,
+    user_picture: `https://randomuser.me/api/portraits/${
+      Math.random() >= 0.5 ? "" : "wo"
+    }men/${Math.round(Math.random() * 99)}.jpg`,
+    playlistinfo: {
+      tags: [],
+      reviews: [],
+      comments: [],
+      content: [
+        {
+          id: "1",
+          title: "Step 1: Know what Node.js is exactly",
+          description: "",
+          link:
+            "https://medium.com/free-code-camp/what-exactly-is-node-js-ae36e97449f5",
+        },
+        {
+          id: "2",
+          title: "Step 2: Follow this amazing YouTube video",
+          description: "",
+          link: "https://www.youtube.com/watch?v=fBNz5xF-Kx4",
+        },
+        {
+          id: "3",
+          title: "Step 3: Skim through the Node.js docs",
+          description: "",
+          link: "https://nodejs.org/en/docs/guides/",
+        },
+      ],
+    },
+  },
+  {
+    title: "Dive into Data Science",
+    description:
+      "With these resources, you should be able to become the data scientist everyone aspires to be..",
+    username: names[Math.round(Math.random() * 99)].username,
+    user_picture: `https://randomuser.me/api/portraits/${
+      Math.random() >= 0.5 ? "" : "wo"
+    }men/${Math.round(Math.random() * 99)}.jpg`,
+    playlistinfo: {
+      tags: [],
+      reviews: [],
+      comments: [],
+      content: [
+        {
+          id: "1",
+          title: "Step 1: What exactly is data science?",
+          description: "",
+          link:
+            "https://medium.com/@onejohi/an-introduction-to-data-science-32403b22f5c1",
+        },
+        {
+          id: "2",
+          title: "Step 2: Here's what data scientists say",
+          description: "",
+          link: "https://www.youtube.com/watch?v=dYZJxhYjBE8",
+        },
+        {
+          id: "3",
+          title: "Step 3: Here's what you shouldn't be doing",
+          description: "",
+          link: "https://www.youtube.com/watch?v=4OZip0cgOho",
+        },
+        {
+          id: "4",
+          title: "Step 4: Finish it off with this amazing course.",
+          description: "",
+          link: "https://www.youtube.com/watch?v=ua-CiDNNj30",
+        },
+      ],
+    },
+  },
+  {
+    title: "The Best Way to Learn React.js",
+    description:
+      "With these resources, you should be able to master React.js in no time.",
+    username: names[Math.round(Math.random() * 99)].username,
+    user_picture: `https://randomuser.me/api/portraits/${
+      Math.random() >= 0.5 ? "" : "wo"
+    }men/${Math.round(Math.random() * 99)}.jpg`,
+    playlistinfo: {
+      tags: [],
+      reviews: [],
+      comments: [],
+      content: [
+        {
+          id: "1",
+          title: "Step 1: Follow the official Tutorial",
+          description: "",
+          link: "https://reactjs.org/tutorial/tutorial.html",
+        },
+        {
+          id: "2",
+          title: "Step 2: Follow NetNinja's YouTube video playlist",
+          description: "",
+          link: "https://www.youtube.com/watch?v=ur6I5m2nTvk",
+        },
+        {
+          id: "3",
+          title: "Step 3: Contribute to open source React projects",
+          description: "",
+          link:
+            "https://github.com/facebook/react/network/dependents?package_id=UGFja2FnZS0xMzM2NDkxNg%3D%3D",
+        },
+      ],
+    },
+  },
+  {
+    title: "Mastering SwiftUI in 5 Steps",
+    description: "Master the newly launched SwiftUI by Apple.",
+    username: names[Math.round(Math.random() * 99)].username,
+    user_picture: `https://randomuser.me/api/portraits/${
+      Math.random() >= 0.5 ? "" : "wo"
+    }men/${Math.round(Math.random() * 99)}.jpg`,
+    playlistinfo: {
+      tags: [],
+      reviews: [],
+      comments: [],
+      content: [
+        {
+          id: "1",
+          title: "Step 1: How is SwiftUI different from the rest?",
+          description: "",
+          link:
+            "https://medium.com/@navdeepsingh_2336/swiftui-introduction-2204b2f541b7",
+        },
+
+        {
+          id: "2",
+          title:
+            "Step 2: Stanford CS193P by Paul Hegarty is fully available on YouTube",
+          description: "",
+          link: "https://www.youtube.com/watch?v=jbtqIBpUG7g",
+        },
+        {
+          id: "3",
+          title: "Step 3: Follow this short, quick SwiftUI Tutorial by Apple",
+          description: "",
+          link:
+            "https://developer.apple.com/tutorials/swiftui/creating-and-combining-views",
+        },
+        {
+          id: "4",
+          title:
+            "Step 4: DesignCode has some really amazing desigin tutorials for SwiftUI",
+          description: "",
+          link: "https://www.youtube.com/watch?v=jbtqIBpUG7g",
+        },
+        {
+          id: "5",
+          title: "Step 5: Contribute to amazing open source SwiftUI projects",
+          description: "",
+          link:
+            "https://medium.com/better-programming/7-awesome-open-source-swiftui-projects-to-inspire-you-aff778e5d413",
+        },
+      ],
+    },
   },
 ];

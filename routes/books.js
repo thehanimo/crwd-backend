@@ -12,7 +12,7 @@ setTimeout(() => {
     if (res.rows.length == 0) {
       for (let i = 0; i < inputData.length; i++) {
         var temp = inputData[i];
-        if (!temp.publishedDate) continue;
+        if (!temp.publishedDate || !temp.thumbnailUrl) continue;
         let { reviews, rating, rating_count } = getBookReviews();
         let comments = getRandomDiscussions();
         pool

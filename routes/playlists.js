@@ -3,6 +3,35 @@ var router = express.Router();
 var pool = require("../queries");
 const passport = require("passport");
 
+const { getPlaylists } = require("../test-reviews");
+
+setTimeout(() => {
+  pool.query("SELECT * from playlist LIMIT 2;").then((res) => {
+    if (res.rows.length == 0) {
+      let inputData = getPlaylists();
+      for (let i = 0; i < inputData.length; i++) {
+        pool
+          .query(
+            `INSERT INTO playlist(title, description, username, user_picture, pub_date, playlistinfo, rating, rating_count)
+            VALUES($1, $2, $3, $4, $5, $6, $7, $8);`,
+            [
+              inputData[i].title,
+              inputData[i].description,
+              inputData[i].username,
+              inputData[i].user_picture,
+              new Date(Date.now()),
+              inputData[i].playlistinfo,
+              inputData[i].rating,
+              inputData[i].rating_count,
+            ]
+          )
+          .then((res) => console.log(res.rows[0]))
+          .catch((e) => console.error(e.stack));
+      }
+    }
+  });
+}, 2000);
+
 router.get("/", (req, res) => {
   if (req.query.id) {
     pool

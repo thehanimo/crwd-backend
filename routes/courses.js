@@ -4,28 +4,40 @@ var pool = require("../queries");
 const passport = require("passport");
 
 // INSERT COURSES FROM test-courses.json
+var inputData = require("../test-courses.json");
+const { getCourseReviews, getRandomDiscussions } = require("../test-reviews");
 
-// var inputData = require("../test-courses.json");
-// for (let i = 0; i < inputData.length; i++) {
-//   var temp = inputData[i];
-//   pool
-//     .query(
-//       "INSERT INTO course(title, link, professor, picture, courseinfo) VALUES($1, $2, $3, $4, $5)",
-//       [
-//         temp.title,
-//         `https://www.amazon.com/dp/${temp.isbn}`,
-//         temp.professor,
-//         temp.picture.split("&w")[0] + "&w=500&h=500",
-//         {
-//           tags: temp.tags,
-//           reviews: [],
-//           comments: [],
-//         },
-//       ]
-//     )
-//     .then((res) => console.log(res.rows[0]))
-//     .catch((e) => console.error(e.stack));
-// }
+setTimeout(() => {
+  pool.query("SELECT * from course LIMIT 2;").then((res) => {
+    if (res.rows.length == 0) {
+      for (let i = 0; i < inputData.length; i++) {
+        var temp = inputData[i];
+        let { reviews, rating, rating_count } = getCourseReviews();
+        let comments = getRandomDiscussions();
+        pool
+          .query(
+            "INSERT INTO course(title, link, professor, picture, courseinfo, rating, rating_count, description) VALUES($1, $2, $3, $4, $5, $6, $7, $8)",
+            [
+              temp.title,
+              `https://www.amazon.com/dp/${temp.isbn}`,
+              temp.professor,
+              temp.picture,
+              {
+                tags: temp.tags,
+                reviews,
+                comments,
+              },
+              rating,
+              rating_count,
+              temp.description,
+            ]
+          )
+          .then((res) => console.log(res.rows[0]))
+          .catch((e) => console.error(e.stack));
+      }
+    }
+  });
+}, 2000);
 
 router.get("/", (req, res) => {
   if (req.query.id) {

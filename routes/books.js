@@ -5,29 +5,41 @@ const passport = require("passport");
 
 // INSERT BOOKS FROM test-books.json
 
-// var inputData = require("../test-books.json");
-// for (let i = 0; i < inputData.length; i++) {
-//   var temp = inputData[i];
-//   if (!temp.publishedDate) continue;
-//   pool
-//     .query(
-//       "INSERT INTO book(title, link, author, picture, pub_date, bookinfo) VALUES($1, $2, $3, $4, $5, $6)",
-//       [
-//         temp.title,
-//         `https://www.amazon.com/dp/${temp.isbn}`,
-//         temp.authors.join(),
-//         temp.thumbnailUrl,
-//         new Date(temp.publishedDate.$date),
-//         {
-//           tags: temp.categories,
-//           reviews: [],
-//           comments: [],
-//         },
-//       ]
-//     )
-//     .then((res) => console.log(res.rows[0]))
-//     .catch((e) => console.error(e.stack));
-// }
+var inputData = require("../test-books.json");
+const { getBookReviews, getRandomDiscussions } = require("../test-reviews");
+setTimeout(() => {
+  pool.query("SELECT * from book LIMIT 2;").then((res) => {
+    if (res.rows.length == 0) {
+      for (let i = 0; i < inputData.length; i++) {
+        var temp = inputData[i];
+        if (!temp.publishedDate) continue;
+        let { reviews, rating, rating_count } = getBookReviews();
+        let comments = getRandomDiscussions();
+        pool
+          .query(
+            "INSERT INTO book(title, link, author, picture, pub_date, bookinfo, rating, rating_count, description) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9)",
+            [
+              temp.title,
+              `https://www.amazon.com/dp/${temp.isbn}`,
+              temp.authors.join(),
+              temp.thumbnailUrl,
+              new Date(temp.publishedDate.$date),
+              {
+                tags: temp.categories,
+                reviews,
+                comments,
+              },
+              rating,
+              rating_count,
+              temp.longDescription || temp.shortDescription || "",
+            ]
+          )
+          .then((res) => console.log(res.rows[0]))
+          .catch((e) => console.error(e.stack));
+      }
+    }
+  });
+}, 2000);
 
 router.get("/", (req, res) => {
   if (req.query.id) {

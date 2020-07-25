@@ -14,16 +14,17 @@ function createRecommendFunction(tableName, favouriteName) {
             `SELECT id from ${tableName}`
         );
         
-        console.log(favouriteName)
         
         models = models.rows.map(obj => obj.id);
         favourites = favourites.rows;
 
+        if (models.length == 0) {
+            return [];
+        }
+
         const userIndex = favourites.findIndex(element => element.id == userId);
     
         let allFavouriteArray = [];
-
-        console.log(models, favourites, allFavouriteArray);
 
         favourites.forEach(element => {
             allFavouriteArray.push( 
